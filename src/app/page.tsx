@@ -7,10 +7,10 @@ import UpcomingEventsSection from "@/components/landing/UpcomingEventsSection";
 import TeamSection from "@/components/landing/TeamSection";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import FaqSection from "@/components/landing/FaqSection";
-import ChatbotSection from "@/components/landing/ChatbotSection";
 import CallToActionSection from "@/components/landing/CallToActionSection";
 import SubstackSubscribeSection from "@/components/landing/SubstackSubscribeSection";
 import ContactUsSection from "@/components/landing/ContactUsSection";
+import ChatbaseScript from "@/components/landing/chatbot";
 
 
 export default function HomePage() {
@@ -25,10 +25,10 @@ export default function HomePage() {
       <TeamSection />
       <TestimonialsSection />
       <FaqSection />
-      <ChatbotSection />
+      <ContactUsSection />
       <CallToActionSection />
       <SubstackSubscribeSection />
-      <ContactUsSection />
+      <ChatbaseScript />
     </>
   );
 }
