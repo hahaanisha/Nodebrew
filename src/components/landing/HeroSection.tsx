@@ -17,7 +17,7 @@ export default function HeroSection() {
         <Player
           autoplay
           loop
-          src="/assets/cup.json" // Place your JSON file in public/assets/
+          src="/cup.json" // Place your JSON file in public/assets/
           style={{ height: "150px", width: "150px"}}
         />
       </div>
