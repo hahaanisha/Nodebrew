@@ -21,7 +21,6 @@ export const siteConfig = {
       ],
     },
     { title: "Team", href: "#team" },
-    { title: "Chatbot", href: "#chatbot" },
     { title: "Contact Us", href: "#contact-us" },
   ] satisfies NavItem[],
   links: {

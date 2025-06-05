@@ -42,14 +42,14 @@ export default function MarqueeSection() {
           {doubledSponsors.map((sponsor, index) => (
             <div
               key={`${sponsor.id}-${index}`}
-              className="inline-block mx-6 flex-shrink-0"
+              className="inline-block mx-4 flex-shrink-0"
             >
               <Image
                 src={sponsor.logoUrl}
                 alt={sponsor.name}
-                width={150}
-                height={80}
-                className="object-contain h-20 w-auto"
+                width={60}
+                height={30}
+                className="object-contain h-12 w-auto"
                 data-ai-hint={sponsor.aiHint}
               />
             </div>
