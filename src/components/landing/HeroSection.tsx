@@ -4,8 +4,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { ArrowRight } from "lucide-react";
-import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic"; // Import dynamic
 
+// Dynamically import the Player component with ssr: false
+const DynamicLottiePlayer = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false } // This is the key: prevents server-side rendering
+);
 
 export default function HeroSection() {
   return (
@@ -13,12 +18,14 @@ export default function HeroSection() {
       id="hero"
       className="w-full py-20 md:py-32 bg-background overflow-hidden"
     >
-      <div className="flex justify-center mb-1">
-        <Player
+      <div className="flex justify-center mb-0">
+        {" "}
+        {/* Adjust margin as discussed before */}
+        <DynamicLottiePlayer // Use the dynamically imported component
           autoplay
           loop
-          src="/cup.json" // Place your JSON file in public/assets/
-          style={{ height: "150px", width: "150px"}}
+          src="/cup.json" // Ensure this path is correct relative to public/
+          style={{ height: "150px", width: "150px" }}
         />
       </div>
 
