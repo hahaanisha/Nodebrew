@@ -6,31 +6,41 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { cn } from "@/lib/utils";
+import dynamic from "next/dynamic"; // Import dynamic for client-side rendering
+
+// Dynamically import the Player component with ssr: false
+const DynamicLottiePlayer = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false } // This prevents server-side rendering, essential for browser-dependent libraries
+);
 
 const testimonials = [
   {
     id: 1,
-    quote: "Nodebrew has been a game-changer for my career. The support and resources are incredible!",
+    quote:
+      "Nodebrew has been a game-changer for my career. The support and resources are incredible!",
     author: "Sarah L.",
     role: "Software Engineer",
     avatarUrl: "https://placehold.co/100x100.png",
-    aiHint: "woman smiling"
+    aiHint: "woman smiling",
   },
   {
     id: 2,
-    quote: "I found my mentor through Nodebrew, and it has accelerated my learning curve immensely. Highly recommend!",
+    quote:
+      "I found my mentor through Nodebrew, and it has accelerated my learning curve immensely. Highly recommend!",
     author: "Jessica M.",
     role: "UX Designer",
     avatarUrl: "https://placehold.co/100x100.png",
-    aiHint: "person portrait"
+    aiHint: "person portrait",
   },
   {
     id: 3,
-    quote: "The hackathons are so much fun and a great way to learn new technologies in a supportive environment.",
+    quote:
+      "The hackathons are so much fun and a great way to learn new technologies in a supportive environment.",
     author: "Emily R.",
     role: "Data Scientist",
     avatarUrl: "https://placehold.co/100x100.png",
-    aiHint: "professional headshot"
+    aiHint: "professional headshot",
   },
 ];
 
@@ -42,7 +52,9 @@ export default function TestimonialsSection() {
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const current = testimonials[currentIndex];
@@ -51,7 +63,21 @@ export default function TestimonialsSection() {
     <section id="testimonials" className="py-16 md:py-24 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-headline font-bold tracking-tight text-foreground sm:text-4xl">
+          {/* Lottie Player placed above the h2 title */}
+          <div className="flex justify-center mb-0 mt-0">
+            {" "}
+            {/* Adjusted margins to be zero */}
+            <DynamicLottiePlayer
+              autoplay
+              loop
+              src="/community.json" // Make sure this path is correct, e.g., public/assets/community_animation.json
+              style={{ height: "90px", width: "90px" }} // Adjust size as needed
+            />
+          </div>
+
+          <h2 className="text-3xl font-headline font-bold tracking-tight text-foreground sm:text-4xl mt-0">
+            {" "}
+            {/* Added mt-0 for tight spacing */}
             What Our Community Says
           </h2>
           <p className="mt-4 text-lg text-foreground/80">
@@ -75,8 +101,12 @@ export default function TestimonialsSection() {
                   data-ai-hint={current.aiHint}
                 />
                 <div>
-                  <p className="font-semibold text-foreground">{current.author}</p>
-                  <p className="text-sm text-muted-foreground">{current.role}</p>
+                  <p className="font-semibold text-foreground">
+                    {current.author}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {current.role}
+                  </p>
                 </div>
               </div>
             </CardContent>
@@ -100,19 +130,21 @@ export default function TestimonialsSection() {
             <ChevronRight className="h-6 w-6" />
           </Button>
         </div>
-         <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={cn(
-                  "h-2.5 w-2.5 rounded-full transition-colors",
-                  currentIndex === index ? "bg-primary" : "bg-muted-foreground/50 hover:bg-muted-foreground"
-                )}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
-          </div>
+        <div className="flex justify-center mt-8 space-x-2">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={cn(
+                "h-2.5 w-2.5 rounded-full transition-colors",
+                currentIndex === index
+                  ? "bg-primary"
+                  : "bg-muted-foreground/50 hover:bg-muted-foreground"
+              )}
+              aria-label={`Go to testimonial ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

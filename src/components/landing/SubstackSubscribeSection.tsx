@@ -1,10 +1,17 @@
-"use client";
+"use client"; // This component needs to be a client component to use Lottie player and dynamic import
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-import { Mail } from "lucide-react";
+// import { Mail } from "lucide-react"; // Mail icon is no longer needed
+import dynamic from "next/dynamic"; // Import dynamic for client-side rendering of Lottie player
+
+// Dynamically import the Player component with ssr: false
+const DynamicLottiePlayer = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false } // Prevents server-side rendering, essential for browser-dependent libraries
+);
 
 export default function SubstackSubscribeSection() {
   const [email, setEmail] = useState("");
@@ -34,14 +41,31 @@ export default function SubstackSubscribeSection() {
     <section id="substack-subscribe" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center">
-          <Mail className="h-12 w-12 mx-auto mb-4 text-primary" />
-          <h2 className="text-3xl font-headline font-bold tracking-tight text-foreground sm:text-4xl">
+          {/* Lottie Player placed above the h2 title */}
+          <div className="flex justify-center mb-0 mt-0">
+            {" "}
+            {/* Adjusted margins to be zero */}
+            <DynamicLottiePlayer
+              autoplay
+              loop
+              src="/envelope.json" // Make sure this path is correct, e.g., public/assets/subscribe_animation.json
+              style={{ height: "150px", width: "150px" }} // Adjust size as needed
+            />
+          </div>
+
+          <h2 className="text-3xl font-headline font-bold tracking-tight text-foreground sm:text-4xl mt-0">
+            {" "}
+            {/* Added mt-0 for tight spacing */}
             Stay Updated with Nodebrew
           </h2>
           <p className="mt-4 text-lg text-foreground/80">
-            Subscribe to our Substack newsletter for the latest news, events, and insights from our community.
+            Subscribe to our Substack newsletter for the latest news, events,
+            and insights from our community.
           </p>
-          <form onSubmit={handleSubmit} className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <form
+            onSubmit={handleSubmit}
+            className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+          >
             <Input
               type="email"
               placeholder="Enter your email"
@@ -50,7 +74,11 @@ export default function SubstackSubscribeSection() {
               className="flex-grow text-base shadow-sm"
               aria-label="Email for newsletter"
             />
-            <Button type="submit" size="lg" className="shadow-md hover:shadow-lg transition-shadow">
+            <Button
+              type="submit"
+              size="lg"
+              className="shadow-md hover:shadow-lg transition-shadow"
+            >
               Subscribe
             </Button>
           </form>
