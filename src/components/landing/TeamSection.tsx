@@ -4,32 +4,46 @@ import { Linkedin, Twitter } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Alex Johnson",
-    role: "Founder & CEO",
+    name: "Anjali Chaturvedi",
+    role: "Lead",
     imageUrl: "https://placehold.co/300x300.png",
     aiHint: "professional portrait",
-    socials: { linkedin: "#", twitter: "#" }
+    socials: { linkedin: "#", twitter: "#" },
   },
   {
-    name: "Maria Garcia",
-    role: "Head of Community",
+    name: "Tasmiya Khan",
+    role: "Technical Team",
     imageUrl: "https://placehold.co/300x300.png",
     aiHint: "professional headshot",
-    socials: { linkedin: "#", twitter: "#" }
+    socials: { linkedin: "#", twitter: "#" },
   },
   {
-    name: "Sam Lee",
-    role: "Lead Event Coordinator",
+    name: "Hasini Kanchetty",
+    role: "Program Team",
     imageUrl: "https://placehold.co/300x300.png",
     aiHint: "person smiling",
-    socials: { linkedin: "#", twitter: "#" }
+    socials: { linkedin: "#", twitter: "#" },
   },
-    {
-    name: "Jordan Green",
-    role: "Mentorship Program Lead",
+  {
+    name: "Sanskruti Patke",
+    role: "Program Team",
     imageUrl: "https://placehold.co/300x300.png",
     aiHint: "developer photo",
-    socials: { linkedin: "#", twitter: "#" }
+    socials: { linkedin: "#", twitter: "#" },
+  },
+  {
+    name: "Selorm Apeletey Mensah",
+    role: "Program Team",
+    imageUrl: "https://placehold.co/300x300.png",
+    aiHint: "developer photo",
+    socials: { linkedin: "#", twitter: "#" },
+  },
+  {
+    name: "Sharon Wainaina",
+    role: "Program Team",
+    imageUrl: "https://placehold.co/300x300.png",
+    aiHint: "developer photo",
+    socials: { linkedin: "#", twitter: "#" },
   },
 ];
 
