@@ -25,7 +25,7 @@ export default function AboutUsSection() {
                 <p className="text-foreground/90 mb-6 leading-relaxed">
                   Nodebrew is a global community dedicated to fostering an inclusive environment for women in technology. We aim to empower our members through mentorship, skill development, and networking opportunities, creating a supportive space where women can thrive and lead in the tech industry. Our initiatives focus on bridging gender gaps and promoting diversity across all tech roles.
                 </p>
-                <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
+                <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow ">
                   <Link href="/about">Read Full Story</Link>
                 </Button>
               </div>

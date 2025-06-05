@@ -47,9 +47,8 @@ export default function MarqueeSection() {
               <Image
                 src={sponsor.logoUrl}
                 alt={sponsor.name}
-                width={60}
-                height={30}
-                className="object-contain h-12 w-auto"
+              
+                className="object-contain h-8 w-auto"
                 data-ai-hint={sponsor.aiHint}
               />
             </div>
