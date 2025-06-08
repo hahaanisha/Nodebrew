@@ -10,7 +10,7 @@ import Footer from '@/components/landing/Footer';
 // Using google fonts link instead per instructions
 
 export const metadata: Metadata = {
-  title: 'Nodebrew Community Hub',
+  title: 'Nodebrew',
   description: 'A women-oriented community empowering through technology.',
 };
 
