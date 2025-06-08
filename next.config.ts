@@ -29,6 +29,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'cdn.vectorstock.com',
+        port: '', // Leave empty if no specific port
+        pathname: '/**', // This allows any path from this hostname
+      },
+      {
+        protocol: 'https',
         hostname: 'placehold.co',
         port: '',
         pathname: '/**',

@@ -21,7 +21,8 @@ const testimonials = [
       "Nodebrew has been a game-changer for my career. The support and resources are incredible!",
     author: "Sarah L.",
     role: "Software Engineer",
-    avatarUrl: "https://placehold.co/100x100.png",
+    avatarUrl:
+      "https://cdn.vectorstock.com/i/500p/62/34/user-profile-icon-anonymous-person-symbol-blank-vector-53216234.jpg",
     aiHint: "woman smiling",
   },
   {
@@ -30,7 +31,8 @@ const testimonials = [
       "I found my mentor through Nodebrew, and it has accelerated my learning curve immensely. Highly recommend!",
     author: "Jessica M.",
     role: "UX Designer",
-    avatarUrl: "https://placehold.co/100x100.png",
+    avatarUrl:
+      "https://cdn.vectorstock.com/i/500p/62/34/user-profile-icon-anonymous-person-symbol-blank-vector-53216234.jpg",
     aiHint: "person portrait",
   },
   {
@@ -39,7 +41,8 @@ const testimonials = [
       "The hackathons are so much fun and a great way to learn new technologies in a supportive environment.",
     author: "Emily R.",
     role: "Data Scientist",
-    avatarUrl: "https://placehold.co/100x100.png",
+    avatarUrl:
+      "https://cdn.vectorstock.com/i/500p/62/34/user-profile-icon-anonymous-person-symbol-blank-vector-53216234.jpg",
     aiHint: "professional headshot",
   },
 ];
