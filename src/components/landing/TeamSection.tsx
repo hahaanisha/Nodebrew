@@ -11,6 +11,9 @@ import {
 import { Linkedin, Twitter } from "lucide-react";
 import dynamic from "next/dynamic"; // Import dynamic for client-side rendering
 
+// Import your Avatar components
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 // Dynamically import the Player component with ssr: false
 const DynamicLottiePlayer = dynamic(
   () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
@@ -69,8 +72,6 @@ export default function TeamSection() {
         <div className="text-center mb-12">
           {/* Lottie Player placed above the h2 title */}
           <div className="flex justify-center mb-0 mt-0">
-            {" "}
-            {/* Adjusted margins to be zero */}
             <DynamicLottiePlayer
               autoplay
               loop
@@ -80,8 +81,6 @@ export default function TeamSection() {
           </div>
 
           <h2 className="text-3xl font-headline font-bold tracking-tight text-foreground sm:text-4xl mt-0">
-            {" "}
-            {/* Added mt-0 for tight spacing */}
             Meet Our Team
           </h2>
           <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
@@ -92,25 +91,26 @@ export default function TeamSection() {
           {teamMembers.map((member) => (
             <Card
               key={member.name}
-              className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+              // --- CHANGES HERE ---
+              className="text-center bg-transparent shadow-none border-none transition-all duration-300" // Removed rounded-lg, shadow, border, made transparent
             >
-              <CardHeader className="p-0">
-                <div className="relative w-full h-64 bg-muted">
-                  <Image
+              <CardHeader className="p-0 pt-6 flex flex-col items-center">
+                <Avatar
+                  className="h-44 w-44 mb-4 border-4 border-transparent hover:border-[#41BDA9] transition-colors duration-300" // Added transparent border and hover border
+                >
+                  <AvatarImage
                     src={member.imageUrl}
                     alt={member.name}
-                    layout="fill"
-                    objectFit="cover"
-                    className="grayscale hover:grayscale-0 transition-all duration-300"
-                    data-ai-hint={member.aiHint}
+                    className="transition-all duration-300" // Removed grayscale classes
                   />
-                </div>
+                  <AvatarFallback>{member.name.substring(0, 2)}</AvatarFallback>
+                </Avatar>
               </CardHeader>
-              <CardContent className="p-6">
-                <CardTitle className="text-xl font-semibold">
+              <CardContent className="p-6 pt-0">
+                <CardTitle className="text-2xl font-semibold mb-1">
                   {member.name}
                 </CardTitle>
-                <CardDescription className="text-primary">
+                <CardDescription className="text-lg text-primary">
                   {member.role}
                 </CardDescription>
                 <div className="mt-4 flex justify-center space-x-3">
