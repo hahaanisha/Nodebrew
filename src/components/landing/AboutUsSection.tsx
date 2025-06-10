@@ -31,7 +31,7 @@ export default function AboutUsSection() {
               </div>
               <div className="bg-muted h-64 md:h-full flex items-center justify-center">
                 <Image
-                  src="/Nodebrew.png"
+                  src="/Nodebrew.svg"
                   alt="Nodebrew Community GIF Placeholder"
                   width={600}
                   height={400}

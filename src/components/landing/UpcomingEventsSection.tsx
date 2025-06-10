@@ -25,7 +25,7 @@ const events = [
     title: "Hackbrew",
     description:
       "Join our flagship hackathon event! Innovate, collaborate, and build amazing projects with a supportive community. Open to all skill levels.",
-    imageUrl: "/Hackbrew.png",
+    imageUrl: "/HackBrew.svg",
     aiHint: "hackathon coding",
     learnMoreLink: "#",
     date: "October 26-28, 2024",
@@ -34,7 +34,7 @@ const events = [
     title: "Brewbridge",
     description:
       "Our mentorship program connecting experienced professionals with aspiring women in tech. Bridge the gap and accelerate your career growth.",
-    imageUrl: "/Brewbridge.png",
+    imageUrl: "/BrewBridge.svg",
     aiHint: "mentorship program",
     learnMoreLink: "#",
     date: "Applications Open Sept 1st",
