@@ -20,7 +20,7 @@ export default function AboutPage() {
         </p>
         <div className="my-8 p-4 bg-secondary/50 rounded-lg shadow">
             <Image 
-                src="https://placehold.co/800x400.png" 
+                src="/Nodebrew.svg" 
                 alt="Nodebrew detailed image placeholder" 
                 width={800} 
                 height={400}
