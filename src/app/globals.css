@@ -14,13 +14,13 @@ body {
     --card-foreground: 180 10% 20%;
     --popover: 0 0% 100%;
     --popover-foreground: 180 10% 20%;
-    --primary: 170 60% 45%; /* Teal */
+    --primary: 170 60% 35%;/* Teal */
     --primary-foreground: 170 20% 97%; /* Very Light Teal/Off-white */
     --secondary: 180 10% 90%; /* Light Cool Gray */
     --secondary-foreground: 180 10% 25%; /* Darker text for secondary */
     --muted: 180 10% 85%; /* Muted Cool Gray */
     --muted-foreground: 180 10% 45%;
-    --accent: 170 50% 35%; /* Darker Teal */
+    --accent: 170 50% 25%; /* Darker Teal */
     --accent-foreground: 170 15% 95%; /* Light text for accent */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -50,13 +50,13 @@ body {
     --card-foreground: 180 10% 90%;
     --popover: 180 10% 12%;
     --popover-foreground: 180 10% 90%;
-    --primary: 170 55% 55%; /* Lighter/Brighter Teal for Dark Mode Primary */
+    --primary: 170 55% 40%; /* Lighter/Brighter Teal for Dark Mode Primary */
     --primary-foreground: 180 10% 10%; /* Dark text on primary */
     --secondary: 180 10% 15%;
     --secondary-foreground: 180 10% 85%;
     --muted: 180 10% 20%;
     --muted-foreground: 180 10% 60%;
-    --accent: 170 50% 65%; /* Lighter Teal for Dark Mode Accents */
+    --accent: 170 50% 50%; /* Lighter Teal for Dark Mode Accents */
     --accent-foreground: 180 10% 5%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;

@@ -64,7 +64,7 @@ export default function TestimonialsSection() {
 
   return (
     <section id="testimonials" className="py-16 md:py-24 bg-secondary/50">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8 md:py-24">
         <div className="text-center mb-12">
           {/* Lottie Player placed above the h2 title */}
           <div className="flex justify-center mb-0 mt-0">

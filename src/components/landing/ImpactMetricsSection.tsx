@@ -41,7 +41,7 @@ export default function ImpactMetricsSection() {
       className="py-16 md:py-24 bg-secondary/50"
       ref={sectionRef}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8 md:py-24">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-headline font-bold tracking-tight text-foreground sm:text-4xl">
             Our Impact by the Numbers

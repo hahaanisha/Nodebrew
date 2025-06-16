@@ -9,13 +9,13 @@ import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import FaqSection from "@/components/landing/FaqSection";
 import CallToActionSection from "@/components/landing/CallToActionSection";
 import SubstackSubscribeSection from "@/components/landing/SubstackSubscribeSection";
-import ContactUsSection from "@/components/landing/ContactUsSection";
 import ChatbaseScript from "@/components/landing/chatbot";
 
 
 export default function HomePage() {
   return (
     <>
+  
       <HeroSection />
       <MarqueeSection />
       <AboutUsSection />
@@ -25,7 +25,7 @@ export default function HomePage() {
       <TeamSection />
       <TestimonialsSection />
       <FaqSection />
-      <ContactUsSection />
+
       <CallToActionSection />
       <SubstackSubscribeSection />
       <ChatbaseScript />

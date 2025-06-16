@@ -20,8 +20,9 @@ export const siteConfig = {
         { title: "Brewbridge", href: "#upcoming-events" },
       ],
     },
+    { title: "Chapters", href: "/chapters" },
     { title: "Team", href: "#team" },
-    { title: "Contact Us", href: "#contact-us" },
+    { title: "Contact Us", href: "mailto:hello@nodebrew.org", external: true },
   ] satisfies NavItem[],
   links: {
     whatsapp: "https://wa.me/1234567890", 
