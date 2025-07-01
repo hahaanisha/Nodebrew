@@ -10,19 +10,36 @@ export const siteConfig = {
   name: "Nodebrew",
   description: "A women-oriented community empowering through technology.",
   mainNav: [
-    { title: "About Us", href: "#about-us" },
-    { title: "Why Choose Us", href: "#why-choose-us" },
+    {
+      title: "About Us",
+      href: "/#about-us"
+    },
+    {
+      title: "Why Choose Us",
+      href: "/#why-choose-us"
+    },
     {
       title: "Events",
-      href: "#upcoming-events",
+      href: "/#upcoming-events",
       dropdown: [
-        { title: "Hackbrew", href: "#upcoming-events" }, 
-        { title: "Brewbridge", href: "#upcoming-events" },
+        { title: "Hackbrew", href: "/#upcoming-events" },
+        { title: "Brewbridge", href: "/#upcoming-events" },
       ],
     },
-    { title: "Chapters", href: "/chapters" },
-    { title: "Team", href: "#team" },
-    { title: "Contact Us", href: "mailto:hello@nodebrew.org", external: true },
+    {
+      title: "Chapters",
+      href: "/chapters"
+    },
+    {
+      title: "Team",
+      href: "/#team"
+    },
+    {
+      title: "Contact Us",
+      href: "mailto:hello@nodebrew.org",
+      external: true
+    },
+    
   ] satisfies NavItem[],
   links: {
     whatsapp: "https://wa.me/1234567890", 
