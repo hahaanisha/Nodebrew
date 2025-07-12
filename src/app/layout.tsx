@@ -41,7 +41,7 @@ export default function RootLayout({
       </head>
 
       <body className="font-body antialiased">
-        {/* ✅ Google Tag Manager (noscript) */}
+{/*         {/* ✅ Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5J934K8T"
@@ -50,7 +50,7 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
-
+ */}
         <Navbar />
         <main>{children}</main>
         <Footer />
